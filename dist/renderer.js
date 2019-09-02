@@ -1,5 +1,6 @@
 
 class Renderer {
+    //renders recipe
     render(data) {
         $("#container").empty() 
 
@@ -9,6 +10,7 @@ class Renderer {
         $("#container").append(somehtml)
     }
 
+    //button that hides searchbar
     slider(){
         $("#searchcontainer").slideToggle()
         $("#hide").toggleClass("up down")
