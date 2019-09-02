@@ -1,0 +1,114 @@
+body{
+    background-color: #F0DCCA;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#searchcontainer{
+    display: grid;
+    grid-auto-rows: 1fr 1fr;
+    grid-template-areas: "a" ".";
+    margin-top: 50px;
+    grid-gap: 10px;
+    margin-bottom: 50px;
+    border-bottom: solid 2px gray;
+    align-items: center;
+    justify-items: center;
+}
+
+#searhbar{
+    grid-area: a;
+    display: grid;
+    grid-template-areas: ". l s .";
+    
+}
+
+#look{
+    grid-area: l;
+    width: 300px;
+    border-radius: 10px;
+    height: 30px;
+}
+#send{
+    grid-area: s;
+    width: 100px;
+    border-radius: 10px;
+    height: 30px;
+}
+
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 70px;
+    margin: 70px
+}
+
+.recipe{
+    background-color: #F49D6E;
+    display: grid;
+    grid-template-areas: "t" "c";
+    border-radius: 20px;
+    padding: 30px;
+}
+.content{
+    grid-area: c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "i l";
+}
+.title{
+    grid-area: t;
+    padding: 10px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+}
+.image{
+    width: 15vw;
+    grid-area: i;
+    
+    padding: 10px;
+    display: grid;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.imgcontainer{
+    border-radius: 10px;
+}
+
+.list{
+    grid-area: l;
+    padding: 10px;
+    display: grid;
+    background-color: #EBD8D0;
+    border-radius: 20px;
+    
+  
+}
+
+
+
+
+
+#hide:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    
+  }
+  #hide.up:after {
+    font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f077";
+  }
+
+  #hide{
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      color: gray;
+      font-size: 2em;
+
+  }

@@ -1,0 +1,62 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+
+        <div id="searchcontainer">
+            <div id="searchbar">
+                <input id="look" type="text" placeholder="Your ingredient">
+            <button id="send">Look up!</button>
+            </div>
+            
+        </div>
+
+        <div id="hide" class="up"> </div>
+        
+        
+
+
+        <script id="container-template" type="text/x-handlebars-template">
+            {{#each data}}
+    
+                <div class="recipe">
+
+                    <a href="{{href}}" class="title">{{title}}</a>
+                    <div class="content">
+
+                        <div class="imgcontainer">
+                            <img class="image" src="{{thumbnail}}" >
+                        </div>
+                        
+                        <div class="list"> 
+                            <div>Ingredients:</div>
+                            <ul >
+                                {{#each this.ingredients}}
+                                <li>{{this}}</li>
+                                {{/each}}
+                            </ul>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+    
+            {{/each}}
+    
+         </script>
+
+
+        <div id="container"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+        <script src="./jquery/dist/jquery.js"></script>
+        <script src="./handlebars/dist/handlebars.js"></script>
+        <script src="renderer.js"></script>
+        <script src="main.js"></script>
+        
+    </body>
+</html>
